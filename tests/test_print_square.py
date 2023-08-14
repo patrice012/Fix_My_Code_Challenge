@@ -12,7 +12,8 @@ class Test_print_squre(unittest.TestCase):
         """Test print square with n = 0"""
         args = ["0"]
         program = ["node", "1-print_square.js"]
-        res = subprocess.run(program + args, capture_output=True, text=True, check=True)
+        res = subprocess.run(program + args,\
+            capture_output=True, text=True, check=True)
         output = ""
         self.assertEqual(res.stdout, output)
 
@@ -20,9 +21,8 @@ class Test_print_squre(unittest.TestCase):
         """Test print square with n = 2"""
         args = ["2"]
         program = ["node", "1-print_square.js"]
-        res = subprocess.run(
-            program + args, capture_output=True, text=True, check=True
-            )
+        res = subprocess.run(program + args,\
+            capture_output=True, text=True, check=True)
         _format = "##\n"
         output = ""
         for i in range(int(args[0])):
@@ -33,9 +33,8 @@ class Test_print_squre(unittest.TestCase):
         """Test print square with n = 10"""
         args = ["10"]
         program = ["node", "1-print_square.js"]
-        res = subprocess.run(
-            program + args, capture_output=True, text=True, check=True
-            )
+        res = subprocess.run(program + args,\
+            capture_output=True, text=True, check=True)
         _format = "##########\n"
         output = ""
         for i in range(int(args[0])):
@@ -47,9 +46,8 @@ class Test_print_squre(unittest.TestCase):
         args = ["-2"]
         program = ["node", "1-print_square.js"]
         output = ""
-        res = subprocess.run(
-            program + args, capture_output=True, text=True, check=True
-            )
+        res = subprocess.run(program + args,\
+            capture_output=True, text=True, check=True)
         self.assertEqual(output, res.stdout)
 
     def test_print_square_no_value(self):
