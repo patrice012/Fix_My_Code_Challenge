@@ -35,7 +35,7 @@ class TestFizzBuzz(unittest.TestCase):
             self.assertTrue(output, console.getvalue().strip())
 
     def test_fizzbuzz_with_5_element(self):
-        """Test for n equal 50"""
+        """Test for n equal 5"""
         n = 30
         output = "1 2 Fizz 4 Buzz"
         with patch("sys.stdout", new=StringIO()) as console:
@@ -43,7 +43,7 @@ class TestFizzBuzz(unittest.TestCase):
             self.assertTrue(output, console.getvalue().strip())
 
     def test_fizzbuzz_with_negative_value(self):
-        """Test for n equal 50"""
+        """Test for n equal -10"""
         n = -10
         output = ""
         with patch("sys.stdout", new=StringIO()) as console:
@@ -51,7 +51,7 @@ class TestFizzBuzz(unittest.TestCase):
             self.assertEqual(output, console.getvalue().strip())
 
     def test_fizzbuzz_with_no_value(self):
-        """Test for n equal 50"""
+        """Test for n not set"""
         output = "fizzbuzz() missing 1 required positional argument: 'n'"
         with self.assertRaises(TypeError, msg=output):
             fizzbuzz()
