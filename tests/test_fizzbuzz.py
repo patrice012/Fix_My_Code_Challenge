@@ -26,7 +26,7 @@ class TestFizzBuzz(unittest.TestCase):
         self.assertTrue(True)
 
     def test_fizzbuzz_with_50_elements(self):
-        """Test for n equal 50"""
+        """Test for n equal 30"""
         n = 30
         output = "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz\
         16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz"
@@ -36,7 +36,7 @@ class TestFizzBuzz(unittest.TestCase):
 
     def test_fizzbuzz_with_5_element(self):
         """Test for n equal 5"""
-        n = 30
+        n = 5
         output = "1 2 Fizz 4 Buzz"
         with patch("sys.stdout", new=StringIO()) as console:
             fizzbuzz(n)
